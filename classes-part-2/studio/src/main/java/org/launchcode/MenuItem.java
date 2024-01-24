@@ -1,16 +1,23 @@
 package org.launchcode;
 
+import java.time.LocalDate;
+
 public class MenuItem {
     private double price;
     private String description;
     private String category;
     private boolean isNew;
 
-    public MenuItem(double p, String d, String c, boolean iN) {
+    private LocalDate dateAdded;
+
+    public MenuItem(double p, String d, String c, boolean isNew, LocalDate dateAdded) {
         this.price = p;
         this.description = d;
         this.category = c;
-        this.isNew = iN;
+        this.isNew = isNew;
+        this.dateAdded = LocalDate.now();
+
+
     }
 
     public void setPrice(double price) {
